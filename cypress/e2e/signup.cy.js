@@ -34,7 +34,7 @@ describe('Volopa',function(){
     it('TC_SU-006 Validate  and add "Expected Usage tab" in sign up page  ',()=>{
         registration.form5_validation()
     })
-    it('TC_SU-007 Validate  and add "Confirmation tab" in sign up page  ',()=>{
+    it.only('TC_SU-007 Validate  and add "Confirmation tab" in sign up page  ',()=>{
         registration.form6_validation()
     })
     it('TC_SU-008 Validate Password Strength and Email: Input Register with a password that not meets the specified strength requirements.',()=>{

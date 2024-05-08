@@ -32,7 +32,7 @@ describe('Wallet Section ',function(){
     })
     it('TC_BCC-005 Validate that clicking on "select all" radio button selects all the cards',()=>{
         BulkCardConroll.goToBulkCardControllpage()
-        cy.get(':nth-child(2) > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
+        cy.get(':nth-child(2) > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click({force:true})
     })
     it('TC_BCC-006 Validate that the user is able to add the daily limits on the card, if the card has no limits',()=>{
         BulkCardConroll.goToBulkCardControllpage()

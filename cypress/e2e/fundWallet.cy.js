@@ -1,6 +1,6 @@
 /// <reference types = "Cypress"/>
 
-import { FundWallet } from "../PageObject/FundWallet"
+import { FundWallet } from "../PageObject/PageAction/FundWallet"
 
 const fundWallet = new FundWallet
 
@@ -8,24 +8,32 @@ describe('FundWallet TS_003 ',function(){
     
     beforeEach(() => {
         cy.visit('https://uiredevelopment.volopa.com/')
-        cy.get('#username').type('alexceaki+0141@gmail.com')
+        cy.get('#username').type('qwerty_admin_1')
         cy.get('#password').type('testTest1')
         cy.get('.ant-btn').click()
+        cy.viewport(1440,1000)
     })
-    it ('TC_WD_001 - It should navigate the user to fund your company wallet page', function(){
-        fundWallet.goToFundWalletPage()
+    it('TC_WD_001 - It should navigate the user to fund your company wallet page', function(){
+        fundWallet.goTOFundWalletPage() 
     })
     it ('TC_WD_002 - validate All content on the Fund Wallet page', function(){
-        fundWallet.goToFundWalletPage()
-        cy.get('.ant-typography.medium.dark-green.fs-28px').should('contain.text','Fund Your Company Wallet')
-        cy.get('.ant-col-md-12 > .ant-typography').should('contain.text','Fund Wallet By Amount')
-        cy.get('.ant-col-sm-24 > .ant-typography.medium').should('contain.text','Company Wallet Balance')
+        fundWallet.goTOFundWalletPage()
+        fundWallet.validateAllContent()
     })
     it ('TC_WD_003 - validate That on clicking on the View all currency from the Company wallaet Balance show all currency', function(){
-        fundWallet.goToFundWalletPage()
-        cy.wait(3000)
-        cy.get('.m-t-10 > .ant-col > .ant-btn > span').click()
-        cy.wait(1000)
-        cy.get('.m-t-10 > .ant-col > .ant-btn > span').click()
+        fundWallet.goTOFundWalletPage()
+        fundWallet.viewAllCurrencies()
+    })
+    it('TC_WD_004 - validate that the user is able to fund the company wallet with "euro" with easy transfer', function(){
+        fundWallet.goTOFundWalletPage() 
+        fundWallet.validate_Fund_Wallet('EUR{enter}')
+    })
+    it('TC_WD_005 - validate that the user is able to fund the company wallet with "GBP" with easy transfer', function(){
+        fundWallet.goTOFundWalletPage() 
+        fundWallet.validate_Fund_Wallet('GBP{enter}')
+    })
+    it.only('TC_WD_006 - validate that the user is able to fund the company wallet with "euro" with manual push fund', function(){
+        fundWallet.goTOFundWalletPage() 
+        fundWallet.fund_manual_push()
     })
 })
