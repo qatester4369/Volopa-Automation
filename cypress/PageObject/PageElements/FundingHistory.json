@@ -1,0 +1,7 @@
+{
+    "fundingHistoryLocators":{
+        "fundingHistory":"[id='rc-tabs-0-tab-/wallet/funding-history']",
+        "mainHeading":":nth-child(1) > .ant-col > .ant-typography",
+        "searchField":".ant-input"
+    }
+}

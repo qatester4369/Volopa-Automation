@@ -32,8 +32,20 @@ describe('FundWallet TS_003 ',function(){
         fundWallet.goTOFundWalletPage() 
         fundWallet.validate_Fund_Wallet('GBP{enter}')
     })
-    it.only('TC_WD_006 - validate that the user is able to fund the company wallet with "euro" with manual push fund', function(){
+    it('TC_WD_006 - validate that the user is able to fund the company wallet with "euro" with manual push fund', function(){
         fundWallet.goTOFundWalletPage() 
-        fundWallet.fund_manual_push()
+        fundWallet.fund_manual_push('EUR{enter}')
+    })
+    it('TC_WD_007 - validate that the user is able to fund the company wallet with "GBP" with manual push fund', function(){
+        fundWallet.goTOFundWalletPage() 
+        fundWallet.fund_manual_pushGBP()
+    })
+    it('TC_WD_008 - validate that the user is able to fund the company wallet with "USD" with manual push fund', function(){
+        fundWallet.goTOFundWalletPage() 
+        fundWallet.fund_manual_push('USD{enter}')
+    })
+    it('TC_WD_009 - Validate that user cant fund the wallet if input wrong password on confirmation pop-up', function(){
+        fundWallet.goTOFundWalletPage() 
+        fundWallet.fund_manual_pushWorngPass()
     })
 })
