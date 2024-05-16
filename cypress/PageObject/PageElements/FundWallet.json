@@ -22,6 +22,7 @@
         "continubutton":".button-primary.mt-4.mb-2",
         "approvepaymnttital":".title.w-100",
         "linkonline":"p[class='link font-size-16 mt-4'] strong",
-        "validationamoungt":"body > div:nth-child(2) > section:nth-child(1) > main:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(3) > tr:nth-child(2) > td:nth-child(6) > span:nth-child(1)"
+        "validationamoungt":"body > div:nth-child(2) > section:nth-child(1) > main:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(3) > tr:nth-child(2) > td:nth-child(6) > span:nth-child(1)",
+        "rowInCompanyWalletBalance":"[class='ant-table-row ant-table-row-level-0 row-filled medium fs-18px ']"
     }
 }

@@ -1,0 +1,10 @@
+{
+    "paymentsDashboardLocators":{
+        "menuBtn":"button[class='ant-btn ant-btn-link ant-btn-icon-only ant-dropdown-trigger m-t-15 grey']",
+        "paymentsDashboardBtn":".navbar-overlay > :nth-child(1) > .ant-row > :nth-child(2) > .ant-card > .ant-card-body",
+        "paymentsDashbordHeading":"[id='rc-tabs-0-tab-/payments/dashboard']",
+        "AddARecipient":".slick-current > :nth-child(1) > [tabindex='-1'] > .m-t-10 > .ant-card > .ant-card-body",
+        "recipientListPageHeading":".ant-tabs-tab.ant-tabs-tab-active",
+        "newPayment":"[data-index='1'] > :nth-child(1) > [tabindex='-1'] > .m-t-10 > .ant-card > .ant-card-body"
+    }
+}

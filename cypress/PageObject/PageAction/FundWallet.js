@@ -157,4 +157,8 @@ export class FundWallet {
       cy.get("button[type='submit'] span").click({force:true}).wait(2000)
       cy.get('.ant-notification-notice').should('exist')
     }
+    validateCompanyWalletBalance(){
+      cy.get(variable.fundWalletLocators.walletBalance).should('contain.text','Company Wallet Balance')
+      cy.get(variable.fundWalletLocators.rowInCompanyWalletBalance).should('be.visible')
+    }
 }

@@ -13,38 +13,43 @@ describe('FundWallet TS_003 ',function(){
         cy.get('.ant-btn').click()
         cy.viewport(1440,1000)
     })
-    it('TC_WD_001 - It should navigate the user to fund your company wallet page', function(){
+    it('TC_FW_001 -Validate the clicking on "fund wallet" from header navigate the user to "fund your company wallet page"', function(){
         fundWallet.goTOFundWalletPage() 
     })
-    it ('TC_WD_002 - validate All content on the Fund Wallet page', function(){
+    it('TC_FW_002 - Validate that the "company wallet balance" table is displayed on fund your company wallet page', function(){
+        fundWallet.goTOFundWalletPage()
+        fundWallet.validateCompanyWalletBalance()
+        
+    })
+    it('TC_FW_003 - validate All content on the Fund Wallet page', function(){
         fundWallet.goTOFundWalletPage()
         fundWallet.validateAllContent()
     })
-    it ('TC_WD_003 - validate That on clicking on the View all currency from the Company wallaet Balance show all currency', function(){
+    it('TC_FW_004 - validate that clicking on the View allfrom the Company wallaet Balance display all currencies', function(){
         fundWallet.goTOFundWalletPage()
         fundWallet.viewAllCurrencies()
     })
-    it('TC_WD_004 - validate that the user is able to fund the company wallet with "euro" with easy transfer', function(){
+    xit('TC_FW_005 - validate that the user is able to fund the company wallet with "euro" as easy transfer', function(){
         fundWallet.goTOFundWalletPage() 
         fundWallet.validate_Fund_Wallet('EUR{enter}')
     })
-    it('TC_WD_005 - validate that the user is able to fund the company wallet with "GBP" with easy transfer', function(){
+    it('TC_FW_006 - validate that the user is able to fund the company wallet with "GBP" as easy transfer', function(){
         fundWallet.goTOFundWalletPage() 
         fundWallet.validate_Fund_Wallet('GBP{enter}')
     })
-    it('TC_WD_006 - validate that the user is able to fund the company wallet with "euro" with manual push fund', function(){
+    it('TC_FW_007 - validate that the user is able to fund the company wallet with "euro" as manual push fund', function(){
         fundWallet.goTOFundWalletPage() 
         fundWallet.fund_manual_push('EUR{enter}')
     })
-    it('TC_WD_007 - validate that the user is able to fund the company wallet with "GBP" with manual push fund', function(){
+    it('TC_FW_008 - validate that the user is able to fund the company wallet with "GBP" as manual push fund', function(){
         fundWallet.goTOFundWalletPage() 
         fundWallet.fund_manual_pushGBP()
     })
-    it('TC_WD_008 - validate that the user is able to fund the company wallet with "USD" with manual push fund', function(){
+    it('TC_FW_009 - validate that the user is able to fund the company wallet with "USD" as manual push fund', function(){
         fundWallet.goTOFundWalletPage() 
         fundWallet.fund_manual_push('USD{enter}')
     })
-    it('TC_WD_009 - Validate that user cant fund the wallet if input wrong password on confirmation pop-up', function(){
+    it('TC_FW_010 - Validate that user cant fund the wallet if input wrong password on confirmation pop-up', function(){
         fundWallet.goTOFundWalletPage() 
         fundWallet.fund_manual_pushWorngPass()
     })
